@@ -11,7 +11,7 @@ gulp.task('mocha', function() {
 });
 
 gulp.task('watch-mocha', function() {
-    gulp.watch(['src/**', 'test/**'], ['mocha']);
+    gulp.watch(['src/**/*', 'test/**/*'], ['mocha']);
 });
 
 gulp.task('run', ['cassandra'],function () {
