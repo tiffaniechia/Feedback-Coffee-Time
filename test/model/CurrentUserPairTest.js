@@ -20,11 +20,17 @@ describe('User', function () {
             currentPair: otherUser
         });
     });
-    describe('#init', function () {
 
+    describe('#init', function () {
         it('should initialize with user and other user', function () {
             currentUserPair.user.should.equal(firstUser);
             currentUserPair.currentPair.should.equal(otherUser);
+        });
+    });
+
+    describe("#getUserName", function(){
+        it('should get the name of the user', function () {
+           currentUserPair.getUserName().should.equal(firstUser.name);
         });
     });
 
