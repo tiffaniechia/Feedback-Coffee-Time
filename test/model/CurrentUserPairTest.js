@@ -34,4 +34,10 @@ describe('User', function () {
         });
     });
 
+    describe("#getPairName", function(){
+        it('should get the name of the users pair', function () {
+            currentUserPair.getPairName().should.equal(otherUser.name);
+        });
+    });
+
 });
