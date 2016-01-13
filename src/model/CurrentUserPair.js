@@ -11,5 +11,4 @@ CurrentUserPair.prototype.getPairName = function () {
     return this.currentPair.name;
 };
 
-
 module.exports = CurrentUserPair;
