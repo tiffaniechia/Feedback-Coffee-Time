@@ -8,5 +8,11 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form action="/api/initial" method="POST">
+      Team Name: <input type="text" name="teamName">  <br>
+      <input type="submit" value="Submit">
+    </form>
+
   </body>
 </html>

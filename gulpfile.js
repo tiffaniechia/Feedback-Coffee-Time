@@ -14,11 +14,12 @@ gulp.task('watch-mocha', function() {
     gulp.watch(['src/**/*', 'test/**/*'], ['mocha']);
 });
 
-gulp.task('run', ['cassandra'],function () {
-    nodemon({ script: 'app.js'
-        , ext: 'js'
+gulp.task('start', function () {
+    nodemon({
+        script: './bin/www'
+        , ext: 'js html ejs css'
         , ignore: ['test/**/*.js']
-        //, tasks: ['lint']
+        , env: {'NODE_ENV': 'development'}
     })
         .on('restart', function () {
             console.log('restarted!')
